@@ -1,5 +1,6 @@
 # BeckhoffJsonReadWriter
 
+[![Build status](https://ci.appveyor.com/api/projects/status/kn6dww5nf5r0patw?svg=true)](https://ci.appveyor.com/project/fbarresi/beckhoffjsonreadwriter)
 ![Licence](https://img.shields.io/github/license/fbarresi/BeckhoffJsonReadWriter.svg)
 ![GitHub All Releases](https://img.shields.io/github/downloads/fbarresi/BeckhoffJsonReadWriter/total)
 
