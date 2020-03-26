@@ -26,7 +26,7 @@ This is an opensource library that allows read and write json files for Beckhoff
 
 Download and reference the [BeckhoffJsonReadWriter library](https://github.com/fbarresi/BeckhoffJsonReadWriter/releases/latest) and import it to your project.
 
-![](https://github.com/fbarresi/BeckhoffHttpClient/raw/master/docs/library.png)
+![](https://github.com/fbarresi/BeckhoffJsonReadWriter/raw/master/docs/library.png)
 
 You can now declare and call a json parser in your program and start using json files.
 
