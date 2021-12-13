@@ -20,7 +20,6 @@ namespace TFU003
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         const int SW_HIDE = 0;
-        //const int SW_SHOW = 5;
         
         public static int Main(string[] args)
             => CommandLineApplication.Execute<Program>(args);
@@ -39,7 +38,7 @@ namespace TFU003
         }
         public async Task OnExecute()
         {
-            var adsClient = new TcAdsClient { Synchronize = false };
+            var adsClient = new AdsClient();
             var handle = GetConsoleWindow();
             ShowWindow(handle, SW_HIDE);
 
