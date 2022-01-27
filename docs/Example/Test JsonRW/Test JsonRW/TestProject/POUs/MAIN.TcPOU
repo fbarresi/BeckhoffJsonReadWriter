@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <POU Name="MAIN" Id="{dbd58374-97a7-4ff4-9f5e-12b0f08c73ae}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	parser : JsonParser;
+    json : json_st := (name:='test', age:=23, car := 'supercar');
+	fileMethod : ParserMethod := ParserMethod.WriteFile;
+	runExecute : BOOL;
+	hasError : BOOL;
+	errorId : UDINT;
+	filename : STRING := 'test.json';
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[parser(
+	Execute:=runExecute, 
+	File:= CONCAT('C:/testing/', filename), 
+	ParseMethod:= TO_STRING(fileMethod),
+	Content:= 'MAIN.json',
+	Port := 851,
+	HasError=> hasError, 
+	ErrorId=> errorId);
+	
+IF runExecute THEN
+	runExecute := FALSE;
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="10" Count="4" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="19" Count="3" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

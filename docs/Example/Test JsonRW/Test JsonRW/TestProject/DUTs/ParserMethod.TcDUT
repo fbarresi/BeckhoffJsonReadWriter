@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <DUT Name="ParserMethod" Id="{d0c0a20a-2911-4eb0-bc46-c097d88e62c9}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+{attribute 'strict'}
+{attribute 'to_string'}
+TYPE ParserMethod :
+(
+    ReadFile,
+    WriteFile
+);
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

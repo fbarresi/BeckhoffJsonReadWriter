@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.4">
+  <DUT Name="json_st" Id="{57d9c0de-990c-435b-b176-07fd3b3060ca}">
+    <Declaration><![CDATA[TYPE json_st :
+STRUCT
+	{attribute 'json' := 'name'}
+	name : STRING;
+	{attribute 'json' := 'age'}
+	age : INT;
+	{attribute 'json' := 'car'}
+	car : STRING;
+END_STRUCT
+END_TYPE]]></Declaration>
+  </DUT>
+</TcPlcObject>

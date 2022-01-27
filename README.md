@@ -22,6 +22,8 @@ This is an opensource library that allows read and write json files for Beckhoff
 
 ## How to use the TwinCAT Library
 
+#### Jump to Quick-Start using an [Example](https://github.com/fbarresi/BeckhoffJsonReadWriter/tree/master/docs/Example)
+
 ### Reference the BeckhoffJsonReadWriter Library
 
 Download and reference the [BeckhoffJsonReadWriter library](https://github.com/fbarresi/BeckhoffJsonReadWriter/releases/latest) and import it to your project.
