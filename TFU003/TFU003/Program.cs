@@ -50,7 +50,10 @@ namespace TFU003
 
                 logger.Debug("Starting Json Read Writer");
                 logger.Debug($"Connecting to Beckhoff Port: {AdsPort} - AdsNet: '{AdsNetId}'");
-                adsClient.Connect(AdsNetId, AdsPort);
+                if(string.IsNullOrEmpty(AdsNetId)) 
+                    adsClient.Connect(AdsPort);
+                else
+                   adsClient.Connect(AdsNetId, AdsPort);
 
                 logger.Debug($"Method: {Method}");
 
