@@ -40,7 +40,7 @@ END_VAR
 parser(
 	Execute:=FALSE , 
 	File:= 'C:\temp\my-fancy-json.json', 
-	ParseMethod:= 'Read' , // or even 'Write'
+	ParseMethod:= 'ReadFile' , // or even 'WriteFile'
 	Content:= 'GVL.Variable',
 	HasError=> , 
 	ErrorId=> );

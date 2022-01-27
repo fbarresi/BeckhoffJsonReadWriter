@@ -334,3 +334,8 @@ _CompileInfo/
 _Libraries/
 _Boot/
 _Config/
+*.bak
+*.tmc
+*.Reftmc
+*.~u
+*.tclrs

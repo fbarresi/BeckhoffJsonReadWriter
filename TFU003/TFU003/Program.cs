@@ -60,14 +60,14 @@ namespace TFU003
 
                 logger.Debug($"Executing...");
 
-                if (Method == FileOperationMethod.Write)
+                if (Method == FileOperationMethod.Write || Method == FileOperationMethod.ReadFile)
                 {
                     var content = File.ReadAllText(FilePath);
                     logger.Debug($"Writing json into {Field}...");
                     var objectResponse = JObject.Parse(content);
                     await adsClient.WriteJson(Field, objectResponse);
                 }
-                else if (Method == FileOperationMethod.Read)
+                else if (Method == FileOperationMethod.Read || Method == FileOperationMethod.WriteFile)
                 {
                     var json = await adsClient.ReadJson(Field);
                     File.WriteAllText(FilePath, json.ToString());
@@ -93,7 +93,9 @@ namespace TFU003
 
     public enum FileOperationMethod
     {
-        Read,
-        Write
+        [Obsolete("Use ReadFile")]Read,
+        [Obsolete("Use WriteFile")]Write,
+        ReadFile,
+        WriteFile
     }
 }
